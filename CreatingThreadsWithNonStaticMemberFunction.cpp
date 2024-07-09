@@ -20,7 +20,7 @@ public:
 };
 
 int main() {
-	Base b;
+	Base b; //non static fonksiyonları çağırırken object ihtiyacı duyarız. statikse duymayız
 	std::thread t1(&Base::run,&b,10);
 	t1.join();
 	return 0;
