@@ -16,6 +16,7 @@ void recursion(char c, int loopFor) {
 	cout << c << " " << buffer++ << endl;
 	recursion(c, --loopFor);
 	m1.unlock();
+	cout << "unlocked by " << c << endl;
 }
 int main() {
 	thread t1(recursion, '0', 10);
